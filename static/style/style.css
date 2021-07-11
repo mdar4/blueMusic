@@ -56,20 +56,40 @@ nav ul li a:hover {
 }
 
 /*------------- header ----------------*/
-header {
+/*Formatação do header*/
+header#banner{
+    background-color: #c3ffff;
+    
+    padding: 80px;
+    min-height: 30rem;
+
     display: flex;
     justify-content: space-around;
     align-items: center;
-    min-height: 30rem;
+    
 }
-
+/*Configurações da img-home*/
+header#banner img {
+    width: 100%;
+    border-radius: 40px ;
+}
+/*Definindo a div para a img-home se adequar a ela*/
 header#banner div {
     width: 100%;
 }
-
-/* header#banner div h1 {
-
-} */
+/*Formatando h1*/
+header#banner div h1 {
+    font-size: 4rem;
+    color: #3359ec;
+    text-shadow: 2px 2px 5px #00000050;
+}
+/*Formatando o h2*/
+header#banner div h2 {
+    font-size: 2.4rem;
+    color:#ff01ed;
+    text-shadow: 2px 2px 5px #00000050;
+    margin-top: 20px;
+}
 
 section#playlist table {
     border-collapse: collapse;
