@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blue Music | Início</title>
+    <title>BlueMusic | Início</title>
     <!--Style-->
-    <link rel="stylesheet" href="/Projeto Blue Na Pratica/style/style.css">
+    <!-- {{ url_for('static', filename='style/style.css') }} não esta funcionando-->
+    <link rel="stylesheet" href="./../static/style/style.css">
     <!--Icons-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
 </head>
+
 <body>
     <!--Navegação-->
     <nav>
-        <a href="#">
-            <img src="/Projeto Blue Na Pratica/img/minilogo.png" alt="">
+        <a href="/">
+            <!--{{ url_for('static', filename='img/minilogo.png') }}-->
+            <img src= "/Blue na pratica/static/img/minilogo.png" alt="">
         </a>
 
         <ul>
@@ -27,6 +29,7 @@
             </li>
         </ul>
     </nav>
+    
     <!--Header-->
     <header id="banner">
         <div>
@@ -37,8 +40,10 @@
                 Crie aqui sua própria playlist
             </h2>
         </div>
-        <img src="/Projeto Blue Na Pratica/img/img-home.png" alt="">
+        <!--{{ url_for('static', filename='img/img-home')}}-->
+        <img src="/Blue na pratica/static/img/img-home.png" alt="">
     </header>
+
     <!--Sessão da playlist-->
     <section id="playlist">
         <!--Tabela-->
