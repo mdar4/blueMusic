@@ -90,10 +90,41 @@ header#banner div h2 {
     text-shadow: 2px 2px 5px #00000050;
     margin-top: 20px;
 }
-
+/*---------------- Section playlist-----------------*/
+/*Configurações da sessão playlist*/
+section#playlist{
+    max-width: 100%;
+    padding: 2rem;
+    overflow-x: auto;
+}
+/*Formatação do h3*/
+section#playlist h3 {
+    text-align: center;
+    color: #3359ec;
+    font-size: 3rem;
+    text-shadow: 1px 1px 2px #ff01ed;
+    letter-spacing: .3rem;
+    margin-bottom: 3rem;
+}
+/*Formatando tabela*/
 section#playlist table {
     border-collapse: collapse;
     width: 100%;
-
+    border-spacing: 0;
 }
-
+/*Estilizando linhas e colunas*/
+section#playlist table th, td {
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+/*Estilizando links*/
+section#playlist table a {
+    padding: 1rem;
+    color: #3359ec;
+    text-decoration: none;
+    transition: all .3s ease-in-out; /*configurando hover*/
+}
+section#playlist table a:hover {
+    color: #ff01ed /*animação de mudar a cor*/
+}
