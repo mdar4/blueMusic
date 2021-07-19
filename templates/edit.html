@@ -13,26 +13,26 @@
         <img id="home" src="{{ url_for('static', filename='img/minilogo.png')}}" alt="Logo BlueMusic">
 
         <div id="card">
-            <h4>Nova Música</h4>
+            <h4>Editar Música</h4>
 
-            <form action="">
+            <form action="/edit/{{musica.id}}" method="POST">
                 <div class="label-float">
-                    <input type="text" name="nome" id="nome">
+                    <input type="text" name="nome" id="nome" placeholder=" " required value="{{ musica.nome}}">
                     <label for="nome">Nome</label>
                 </div>
 
                 <div class="label-float">
-                    <input type="text" name="artista" id="artista">
+                    <input type="text" name="artista" id="artista" placeholder=" " required value="{{ musica.artista }}">
                     <label for="artista">Artista</label>
                 </div>
 
                 <div class="label-float">
-                    <input type="text" name="link" id="link">
+                    <input type="text" name="link" id="link" placeholder=" " required value="{{ musica.link }}">
                     <label for="link">Link</label>
                 </div>
 
                 <div class="justify-center">
-                    <button type="submit">Cadastrar</button>
+                    <button type="submit">Atualizar</button>
                 </div>
 
             </form>

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Style-->
     <!-- {{ url_for('static', filename='style/style.css') }} não esta funcionando-->
-    <link rel="stylesheet" href="./../static/style/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
     <!--Icons-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <title>BlueMusic | Início</title>
@@ -17,7 +17,7 @@
     <nav>
         <a href="/">
             <!--{{ url_for('static', filename='img/minilogo.png') }}-->
-            <img src= "/Blue na pratica/static/img/minilogo.png" alt="">
+            <img src= "{{ url_for('static', filename='img/minilogo.png') }}" alt="">
         </a>
 
         <ul>
@@ -43,7 +43,7 @@
             </h2>
         </div>
         <!--{{ url_for('static', filename='img/img-home')}}-->
-        <img src="/Blue na pratica/static/img/img-home.png" alt="">
+        <img src="{{ url_for('static', filename='img/img-home')}}" alt="">
     </header>
 
     <!--Sessão da playlist-->
@@ -64,18 +64,20 @@
 
             <tbody>
                 <!--Corpo da tabela-->
+                {% for m in musicas %}
                 <tr>
-                    <td>{{musica.nome}}</td>
-                    <td>{{musica.nome}}</td>
-                    <td>musica.artista</td>                
+                    <td>{{m.id}}</td>
+                    <td>{{m.nome}}</td>
+                    <td>{{m.artista}}</td>                
                     <td>
-                        <audio controls src="{{musica.link}}"></audio>
+                        <audio controls src="{{ m.link }}"></audio>
                     </td>  
                     <td>
-                        <a href="">Editar</a>
-                        <a href="">Apagar</a>
+                        <a href="/edit/{{m.id}}">Editar</a>
+                        <a href="/delete/{{m.id}}">Apagar</a>
                     </td>              
                 </tr>
+                {% endfor %}
             </tbody>
         </table>
     </section>
