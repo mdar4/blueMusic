@@ -147,3 +147,116 @@ footer a {
 a:hover{
     color: #ff01ed; /* animação dos links*/
 }
+
+/*---------------------- new html ---------------------------------*/
+
+section#new {
+    background: linear-gradient(#3359ec 50%, #fff 50%);
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+section#new a img#home{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2.5rem;
+    margin: 0;
+    padding: 1rem;
+}
+
+section#new a img#gif{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 7rem;
+    margin: 0;
+    padding: 1rem;
+}
+
+section#new div#card {
+    position: relative;
+    background-color: #c3ffff;
+    padding: 30px;
+    border-radius: 2%;
+    border: 1px solid #001052;
+    box-shadow: 5px 5px 1px 0px #ff01ed90;
+    width: 400px;
+}
+
+section#new div.label-float {
+    position: relative;
+    padding-top: 13px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+section#new div.label-float input {
+    width: 100%;
+    padding: 5px 5px;
+    display: inline-block;
+    border: 0;
+    border-bottom: 2px solid #0130ec;
+    background-color: transparent;
+    outline: none;
+    min-width: 180px;
+    font-size: 16px;
+    transition: all .3s ease-out;
+    border-radius: 0;
+}
+
+section#new div.label-float input:focus{
+    border-bottom: 2px solid #4c6ceb;
+}
+
+section#new div.label-float label {
+    color: #0130ec;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 13px;
+    transition: all .3s ease-out;
+}
+
+section#new div.label-float input:focus + label,
+section#new div.label-float input:valid + label {
+    font-size: 13px;
+    margin-top: 0;
+    color: #4c6ceb;
+}
+
+section#new div.justify-center {
+    display: flex;
+    justify-content: center;
+}
+
+section#new button {
+    background-color: transparent;
+    border-color: #0130ec;
+    color: #0130ec;
+    padding: .8rem;
+    font-size: 12pt;
+    margin-top:2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    transition: all .4s ease-out;
+}
+
+section#new button:hover {
+    background-color: #0130ec;
+    color: #fff;
+}
+
+section#new h4 {
+    text-align: center;
+    color: #0130ec;
+    font-size: 3rem;
+    text-shadow: 1px 1px 2px #ff01ed;
+    margin-bottom: 2rem;
+}

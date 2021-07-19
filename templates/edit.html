@@ -1,12 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blue Music | Editar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
 </head>
 <body>
     
+    <section id="new">
+        <img id="home" src="{{ url_for('static', filename='img/minilogo.png')}}" alt="Logo BlueMusic">
+
+        <div id="card">
+            <h4>Nova Música</h4>
+
+            <form action="">
+                <div class="label-float">
+                    <input type="text" name="nome" id="nome">
+                    <label for="nome">Nome</label>
+                </div>
+
+                <div class="label-float">
+                    <input type="text" name="artista" id="artista">
+                    <label for="artista">Artista</label>
+                </div>
+
+                <div class="label-float">
+                    <input type="text" name="link" id="link">
+                    <label for="link">Link</label>
+                </div>
+
+                <div class="justify-center">
+                    <button type="submit">Cadastrar</button>
+                </div>
+
+            </form>
+        </div>
+
+        <img id="gif" src="{{ url_for('static', filename='img/logo-blue.gif')}}" alt="">
+    </section>
 </body>
 </html>
